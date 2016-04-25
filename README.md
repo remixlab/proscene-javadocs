@@ -1,38 +1,14 @@
-## How to install proscene
+# proscene-javadocs
 
-### Install with the Contribution Manager
+After *proscene* api is compiled run:
 
-Add contributed Libraries by selecting the menu item _Sketch_ → _Import Library..._ → _Add Library..._ This will open the Contribution Manager, where you can browse for proscene, or any other Library you want to install.
-
-Not all available Libraries have been converted to show up in this menu. If a Library isn't there, it will need to be installed manually by following the instructions below.
-
-### Manual Install
-
-Contributed Libraries may be downloaded separately and manually placed within the `libraries` folder of your Processing sketchbook. To find (and change) the Processing sketchbook location on your computer, open the Preferences window from the Processing application (PDE) and look for the "Sketchbook location" item at the top.
-
-By default the following locations are used for your sketchbook folder: 
-  * For Mac users, the sketchbook folder is located inside `~/Documents/Processing` 
-  * For Windows users, the sketchbook folder is located inside `My Documents/Processing`
-
-Download proscene from http://otrolado.info
-
-Unzip and copy the contributed Library's folder into the `libraries` folder in the Processing sketchbook. You will need to create this `libraries` folder if it does not exist.
-
-The folder structure for Library proscene should be as follows:
-
+```sh
+#n below is the prescene release
+$ cd proscene/distribution/proscene-n/reference
+$ git init
+$ git remote add origin https://github.com/remixlab/proscene-javadocs.git
+$ git add *
+$ git commit -am'init commit'
+$ git pull origin gh-pages -Xours
+$ git push origin master:gh-pages
 ```
-Processing
-  libraries
-    proscene
-      examples
-      library
-        proscene.jar
-      reference
-      src
-```
-             
-Some folders like `examples` or `src` might be missing. After Library proscene has been successfully installed, restart the Processing application.
-
-### Troubleshooting
-
-If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Jean Pierre Charalambos](http://otrolado.info).
