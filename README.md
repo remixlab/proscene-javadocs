@@ -9,6 +9,6 @@ $ git init
 $ git remote add origin https://github.com/remixlab/proscene-javadocs.git
 $ git add *
 $ git commit -am'init commit'
-$ git pull origin gh-pages -Xours
+$ git pull --allow-unrelated-histories origin gh-pages -Xours
 $ git push origin master:gh-pages
 ```
